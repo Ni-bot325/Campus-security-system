@@ -22,9 +22,9 @@ This is the **Round-1 submission** of the Product Development Challenge — read
 
 Campus-security-system/  
 │  
-| ├── dataset/ # Synthetic test dataset (profiles, swipes, CCTV, etc.)  
+│ ├── dataset/ # Synthetic test dataset (profiles, swipes, CCTV, etc.)  
 │  
-| ├── output/ # Generated outputs, reports, or metrics  
+│ ├── output/ # Generated outputs, reports, or metrics  
 │  
 | ├── src/ # Core backend modules  
 │ ├── 01.data_loader.py # Data ingestion & cleaning  
