@@ -75,25 +75,19 @@ Campus-security-system/
 ```bash
 git clone https://github.com/<your-username>/Campus-security-system.git
 cd Campus-security-system
+
 2️⃣ Set up a Python environment
 It’s recommended to use Python 3.9+ and a virtual environment to avoid dependency conflicts.
-
-bash
-Copy code
 python3 -m venv venv
 source venv/bin/activate    # On Mac/Linux
 venv\Scripts\activate       # On Windows
+
 3️⃣ Install dependencies
 Install all required Python packages.
-
-bash
-Copy code
 pip install -r requirements.txt
 If you don’t have pip installed, update Python or install pip first:
-
-bash
-Copy code
 python -m ensurepip --upgrade
+
 4️⃣ Prepare the dataset
 Place your CSV dataset files inside the dataset/ folder.
 
@@ -108,11 +102,10 @@ dataset/
 ├── lab_bookings.csv
 ├── library_checkouts.csv
 └── student or staff profiles.csv
+
 5️⃣ Verify the setup
 Run the demo notebook to test the full pipeline:
 
-bash
-Copy code
 jupyter notebook notebooks/main_demo.ipynb
 This will:
 
@@ -129,8 +122,6 @@ Run Markov predictions and anomaly detection
 Optional: Run modules programmatically
 If you want to integrate into your own scripts:
 
-python
-Copy code
 from src import data_loader, entity_resolution, data_linking, timeline, predictive_monitoring, anomaly_detection
 
 profiles, swipes, cctv, notes, bookings, library = data_loader.load_all("dataset/")
