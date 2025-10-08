@@ -69,67 +69,73 @@ Campus-security-system/
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation & Setup
 
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/<your-username>/Campus-security-system.git
 cd Campus-security-system
+2️⃣ Set up a Python environment
+It’s recommended to use Python 3.9+ and a virtual environment to avoid dependency conflicts.
+
+bash
+Copy code
+python3 -m venv venv
+source venv/bin/activate    # On Mac/Linux
+venv\Scripts\activate       # On Windows
+3️⃣ Install dependencies
+Install all required Python packages.
+
+bash
+Copy code
 pip install -r requirements.txt
-▶️ Usage
-Run the end-to-end demonstration notebook:
+If you don’t have pip installed, update Python or install pip first:
+
+bash
+Copy code
+python -m ensurepip --upgrade
+4️⃣ Prepare the dataset
+Place your CSV dataset files inside the dataset/ folder.
+
+Expected files (as provided in the sample synthetic dataset):
+
+Copy code
+dataset/
+├── campus card_swipes.csv
+├── cctv_frames.csv
+├── face_embeddings.csv
+├── free_text_notes (helpdesk or RSVPs).csv
+├── lab_bookings.csv
+├── library_checkouts.csv
+└── student or staff profiles.csv
+5️⃣ Verify the setup
+Run the demo notebook to test the full pipeline:
 
 bash
 Copy code
 jupyter notebook notebooks/main_demo.ipynb
-Or run modules manually:
+This will:
+
+Load & clean the data
+
+Resolve entities
+
+Build unified logs
+
+Generate timelines
+
+Run Markov predictions and anomaly detection
+
+Optional: Run modules programmatically
+If you want to integrate into your own scripts:
 
 python
 Copy code
 from src import data_loader, entity_resolution, data_linking, timeline, predictive_monitoring, anomaly_detection
-Expected workflow:
 
-Load and clean data (data_loader).
-
-Resolve identities (entity_resolution).
-
-Link all events into a canonical log (data_linking).
-
-Generate per-entity timelines (timeline).
-
-Train Markov model and predict missing states (predictive_monitoring).
-
-Detect anomalies (anomaly_detection).
-
-🧭 Roadmap
- Build an interactive dashboard (Streamlit) for timeline search and alerts.
-
- Improve CCTV linkage with temporal proximity and embedding calibration.
-
- Add state coarsening & time-aware Markov for better predictions.
-
- Implement real-time ingestion (Kafka/streams).
-
- Add advanced privacy features (role-based access, differential privacy).
-
-🤝 Contributing
-We welcome pull requests and suggestions!
-
-Fork this repo
-
-Create a feature branch
-
-Commit changes and open a PR
-
-📜 License
-MIT License — feel free to use and adapt with attribution.
-
-🙌 Acknowledgements
-Synthetic dataset provided for the Product Development Challenge.
-
-Python libraries: pandas, numpy, networkx, scikit-learn, rapidfuzz.
-
-
-
-
-
-
+profiles, swipes, cctv, notes, bookings, library = data_loader.load_all("dataset/")
+entity_map = entity_resolution.resolve(profiles, swipes, cctv)
+events = data_linking.link(profiles, swipes, cctv, notes, bookings, library, entity_map)
+timelines = timeline.build(events)
+predictions = predictive_monitoring.predict(events)
+anomalies = anomaly_detection.detect(events)
