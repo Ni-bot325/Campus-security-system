@@ -1,7 +1,0 @@
-timestamp,event_type,location,source,details
-2025-08-29 07:41:18,physical_access,HOSTEL_GATE,card_swipe,Card swipe at HOSTEL_GATE
-2025-09-02 13:58:39,physical_access,LIB_ENT,card_swipe,Card swipe at LIB_ENT
-2025-09-04 02:31:00,face_recognition,LAB_101,cctv_system,Face detected at LAB_101
-2025-09-05 06:46:02,physical_access,AUDITORIUM,card_swipe,Card swipe at AUDITORIUM
-2025-09-12 19:18:02,physical_access,AUDITORIUM,card_swipe,Card swipe at AUDITORIUM
-2025-09-19 00:36:50,physical_access,LAB_101,card_swipe,Card swipe at LAB_101
