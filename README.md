@@ -24,19 +24,19 @@ Campus-security-system/
 │  
 ├── src/  
 │ ├── 01.data_loader.py # Data ingestion & cleaning  
-│ ├── 02.entity_resolution.py # Deterministic + fuzzy + embedding-based resolution
-│ ├── 03.data_linking.py # Canonical event log & graph fusion
-│ ├── 04.timeline.py # Timeline construction & summarization
-│ ├── 05.anomaly_detection.py # Inactivity & anomaly checks
-│ ├── 06.predictive_monitoring.py # Markov chain next-state predictions
-│ └── utils.py # Shared helper functions
-│
-├── notebooks/
-│ └── main_demo.ipynb # End-to-end pipeline demonstration
-│
-├── dataset/ # Synthetic test dataset (profiles, swipes, CCTV, etc.)
-├── README.md # This file
-└── requirements.txt # Python dependencies
+│ ├── 02.entity_resolution.py # Deterministic + fuzzy + embedding-based resolution  
+│ ├── 03.data_linking.py # Canonical event log & graph fusion  
+│ ├── 04.timeline.py # Timeline construction & summarization  
+│ ├── 05.anomaly_detection.py # Inactivity & anomaly checks  
+│ ├── 06.predictive_monitoring.py # Markov chain next-state predictions  
+│ └── utils.py # Shared helper functions  
+│  
+├── notebooks/  
+│ └── main_demo.ipynb # End-to-end pipeline demonstration  
+│  
+├── dataset/ # Synthetic test dataset (profiles, swipes, CCTV, etc.)  
+├── README.md # This file  
+└── requirements.txt # Python dependencies  
 
 ---
 
