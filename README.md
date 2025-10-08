@@ -1,6 +1,6 @@
 # Campus Security System — Entity Resolution & Predictive Monitoring
 
-> A modular backend to unify campus data sources (swipes, Wi-Fi/CCTV, library, bookings, helpdesk notes) into **per-entity activity timelines**, with **Markov-based predictive monitoring** and **anomaly detection**.
+A modular backend to unify campus data sources (swipes, Wi-Fi/CCTV, library, bookings, helpdesk notes) into **per-entity activity timelines**, with **Markov-based predictive monitoring** and **anomaly detection**.
 
 ---
 
@@ -71,8 +71,8 @@ Campus-security-system/
 
 ## 🛠️ Installation & Setup
 
-### 1️⃣ Clone the repository
 ```bash
+1️⃣ Clone the repository
 git clone https://github.com/<your-username>/Campus-security-system.git
 cd Campus-security-system
 
