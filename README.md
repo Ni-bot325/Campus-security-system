@@ -39,7 +39,7 @@ Campus-security-system/
 │ └── main_demo.ipynb # End-to-end pipeline demonstration  
 │  
 │ ├── README.md # Project documentation  
-  └── requirements.txt # Python dependencies  
+└── requirements.txt # Python dependencies  
 
 ---
 
