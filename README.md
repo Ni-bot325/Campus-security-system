@@ -22,6 +22,10 @@ This is the **Round-1 submission** of the Product Development Challenge — read
 
 Campus-security-system/  
 │  
+├── dataset/ # Synthetic test dataset (profiles, swipes, CCTV, etc.)  
+|  
+├── output/  
+|  
 ├── src/  
 │ ├── 01.data_loader.py # Data ingestion & cleaning  
 │ ├── 02.entity_resolution.py # Deterministic + fuzzy + embedding-based resolution  
@@ -33,8 +37,7 @@ Campus-security-system/
 │  
 ├── notebooks/  
 │ └── main_demo.ipynb # End-to-end pipeline demonstration  
-│  
-├── dataset/ # Synthetic test dataset (profiles, swipes, CCTV, etc.)  
+│   
 ├── README.md # This file  
 └── requirements.txt # Python dependencies  
 
