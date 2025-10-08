@@ -26,7 +26,7 @@ Campus-security-system/
 │  
 │ ├── output/ # Generated outputs, reports, or metrics  
 │  
-| ├── src/ # Core backend modules  
+│ ├── src/ # Core backend modules  
 │ ├── 01.data_loader.py # Data ingestion & cleaning  
 │ ├── 02.entity_resolution.py # Deterministic + fuzzy + embedding-based resolution  
 │ ├── 03.data_linking.py # Canonical event log & graph fusion  
@@ -35,10 +35,10 @@ Campus-security-system/
 │ ├── 06.predictive_monitoring.py # Markov chain next-state predictions  
 │ └── utils.py # Shared helper functions  
 │  
-| ├── notebooks/ # Demo notebooks  
+│ ├── notebooks/ # Demo notebooks  
 │ └── main_demo.ipynb # End-to-end pipeline demonstration  
 │  
-| ├── README.md # Project documentation  
+│ ├── README.md # Project documentation  
   └── requirements.txt # Python dependencies  
 
 ---
